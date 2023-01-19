@@ -40,7 +40,7 @@ root.render(
       <Routes>
         <Route exact path='/' element={<ItemListContainer/>} greeting='Estamos en el directorio /'/>
         <Route exact path='/productos' element={<ItemListContainer/>} greeting='Estamos en el directorio productos/'/>
-        <Route exact path='/producto/:productoId' element={<ItemListContainer/>} greeting='Estamos en el directorio del producto X/'/>
+        <Route exact path='/producto/:productoId' element={<ItemListContainer/>} greeting='Estamos en el producto X/'/>
         <Route exact path='/nosotros' element={<ItemListContainer/>} greeting='Estamos en el directorio nosotros/'/>
       </Routes>
 
