@@ -3,10 +3,14 @@
 #########################################*/
 
 //Modulos
+import { Link } from "react-router-dom"
+
 //Estilos
 import "./NavBar.css"
-import CardWidget from "../cardWidget/CardWidget.js"
+
 //Componentes
+import CardWidget from "../cardWidget/CardWidget.js"
+
 //Core
 
 /*#########################################
@@ -35,15 +39,15 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <ul>
-                <li><a className="nav-link" aria-current="page" href="index.html">Inicio</a></li>
-                <li className="item"><a class="nav-link" href="menu.html">Menú</a></li>
-                <li><a className="nav-link" href="contacto.html">Contacto</a></li>
-                <li><a className="nav-link" href="sobre-nosotros.html">Nosotros</a></li>
-                <li><a className="nav-link" href="preguntas-frecuentes.html">FAQ</a></li>
+                <li><Link className="nav-link" aria-current="page" to="/">Inicio</Link></li>
+                <li className="item"><Link class="nav-link" to="/productos">Menú</Link></li>
+                <li><Link className="nav-link" to="/contacto">Contacto</Link></li>
+                <li><Link className="nav-link" to="/nosotros">Nosotros</Link></li>
+                <li><Link className="nav-link" to="/faq">FAQ</Link></li>
               </ul>
             </div>
           </div>
-        </div>
+        </div>to
       </nav>
     </header>
 

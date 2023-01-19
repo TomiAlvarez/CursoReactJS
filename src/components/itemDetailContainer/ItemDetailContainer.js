@@ -3,31 +3,23 @@
 #########################################*/
 
 //Modulos
-import { useState } from "react"
-
 //Estilos
-import "./ItemListContainer.css"
-
+import "./ItemDetailContainer.css"
 //Componentes
-import ItemList from "../itemList/ItemList"
-
 //Core
 
 /*#########################################
                  Logica
 #########################################*/
 
-const ItemListContainer = (props) => {
-
+const ItemDetailContainer = () => {
 
     return(
 
         <div>
-            <p>
-                ItemListContainer {props.greeting}
-            </p>
-            <ItemList/>
+            ItemDetailContainer
         </div>
+
     )
 
 }
@@ -36,4 +28,4 @@ const ItemListContainer = (props) => {
                  Exportaciones
 #########################################*/
 
-export default ItemListContainer
+export default ItemDetailContainer
