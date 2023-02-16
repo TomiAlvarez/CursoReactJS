@@ -6,6 +6,7 @@
 //Estilos
 import "./CardWidget.css"
 //Componentes
+
 //Core
 
 /*#########################################
@@ -17,7 +18,7 @@ const CardWidget = (props) => {
     return(
 
         <div className="carrito">
-            <img src=".././img/carrito.png"></img> {props.cantidad}
+             {props.cantidad}
         </div>
 
     )

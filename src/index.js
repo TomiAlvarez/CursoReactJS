@@ -16,9 +16,14 @@ import './index.css';
               COMPONENTES
 #########################################*/
 /* import App from './App'; */
+import CartProvider from './context/CartContext';
 import NavBar from './components/navbar/NavBar.js';
 import Home from './components/home/Home';
 import ItemListContainer from './components/itemListContainer/ItemListContainer.js';
+import ItemCategoryContainer from './components/itemCategoryContainer/ItemCategoryContainer';
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer.js';
+import Cart from './components/cart/Cart';
+import AboutUs from './components/aboutUs/AboutUs.js';
 import Footer from './components/footer/Footer.js';
 
 /*#########################################
@@ -31,23 +36,30 @@ import reportWebVitals from './reportWebVitals';
 #########################################*/
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <React.StrictMode>
+
+    <CartProvider>
 
     <BrowserRouter>
 
       <NavBar/>
 
       <Routes>
-        <Route exact path='/' element={<ItemListContainer/>} greeting='Estamos en el directorio /'/>
+        <Route exact path='/' element={<Home/>}/>
         <Route exact path='/productos' element={<ItemListContainer/>} greeting='Estamos en el directorio productos/'/>
-        <Route exact path='/producto/:productoId' element={<ItemListContainer/>} greeting='Estamos en el producto X/'/>
-        <Route exact path='/nosotros' element={<ItemListContainer/>} greeting='Estamos en el directorio nosotros/'/>
+        <Route exact path='/producto/:productoId' element={<ItemDetailContainer/>}/>
+        <Route exact path='/categoria/:categoriaId' element={<ItemCategoryContainer/>}/>
+        <Route exact path='/carrito' element={<Cart/>}/>
+        <Route exact path='/nosotros' element={<AboutUs/>} greeting='Estamos en el directorio nosotros/'/>
       </Routes>
 
       <Footer/>
 
     </BrowserRouter>
     
+    </CartProvider>
+
   </React.StrictMode>
 );
 

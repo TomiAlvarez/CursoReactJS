@@ -3,12 +3,13 @@
 #########################################*/
 
 //Modulos
+import { useParams } from "react-router-dom"
 
 //Estilos
-import "./ItemListContainer.css"
+import "./ItemCategoryContainer.css"
 
 //Componentes
-import ItemList from "../itemList/ItemList"
+import ItemCategory from '../itemCategory/ItemCategory'
 
 //Core
 
@@ -16,13 +17,16 @@ import ItemList from "../itemList/ItemList"
                  Logica
 #########################################*/
 
-const ItemListContainer = (props) => {
+const ItemCategoryContainer = () => {
+
+    const {categoriaId} = useParams()
 
     return(
 
-        <div>
-            <ItemList/>
-        </div>
+        <section>
+            <ItemCategory categoria={categoriaId}/>
+        </section>
+
     )
 
 }
@@ -31,4 +35,4 @@ const ItemListContainer = (props) => {
                  Exportaciones
 #########################################*/
 
-export default ItemListContainer
+export default ItemCategoryContainer

@@ -1,0 +1,13 @@
+.contenedorCount{
+    display: flex;
+    height: 30px;
+}
+
+.contenedorCountHijo button{
+    width: 25px;
+}
+
+.contenedorCountHijo{
+    display: flex;
+    flex-direction: row;
+}

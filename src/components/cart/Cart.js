@@ -3,26 +3,22 @@
 #########################################*/
 
 //Modulos
-
 //Estilos
-import "./ItemListContainer.css"
+import "./Cart.css"
 
 //Componentes
-import ItemList from "../itemList/ItemList"
-
 //Core
 
 /*#########################################
                  Logica
 #########################################*/
 
-const ItemListContainer = (props) => {
+const Cart = () => {
 
     return(
 
-        <div>
-            <ItemList/>
-        </div>
+       <p>Cart</p>
+
     )
 
 }
@@ -31,4 +27,4 @@ const ItemListContainer = (props) => {
                  Exportaciones
 #########################################*/
 
-export default ItemListContainer
+export default Cart

@@ -5,6 +5,7 @@
 //Modulos
 //Estilos
 import "./Item.css"
+import { Link } from "react-router-dom"
 //Componentes
 //Core
 
@@ -14,15 +15,16 @@ import "./Item.css"
 
 const Item = (props) => {
 
-    const {title, category, description, price} = props.data
+    const {title, category, description, price, id} = props.data
 
     return(
 
-        <div>
-            <p>{category}</p>
-            <p>{title}</p>
-            <p>{description}</p>
-            <p>{price}</p>
+        <div className="item">
+            <h4 className="categoriaProducto">Category: {category}</h4>
+            <h3 className="tituloProducto">{title}</h3>
+            <p className="parrafo">{description}</p>
+            <p className="parrafo">Price: ${price}</p>
+            <Link className="detalle" to={`/producto/${id}`}> Ver Detalle </Link>
         </div>
 
     )
